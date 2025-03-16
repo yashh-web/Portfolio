@@ -116,4 +116,17 @@ function scrollActive() {
 }
 
 window.addEventListener('scroll', scrollActive)
+function submitForm() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
 
+  if (name && email && message) {
+      alert('Thank you for your message, ' + name + '!');
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('message').value = '';
+  } else {
+      alert('Please fill in all fields.');
+  }
+}
